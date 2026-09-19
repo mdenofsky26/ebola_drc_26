@@ -7,10 +7,6 @@ library(janitor)    # install.packages("janitor") if you don't have it
 # ---------------------------------------------------------------------------
 # 1. LOAD DATA
 # ---------------------------------------------------------------------------
-# IMPORTANT: use the RAW file URL, not the GitHub webpage (blob) URL.
-# Blob URL (wrong):  .../blob/main/data/...csv   <- returns an HTML page
-# Raw URL (correct): .../raw/main/data/...csv    <- returns the actual CSV
-
 data_path <- "https://raw.githubusercontent.com/mdenofsky26/ebola_drc_26/main/data/drc_ebola_cases_consolidated.csv"
 
 ebola_data <- read_csv(data_path, show_col_types = FALSE) %>%
